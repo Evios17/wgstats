@@ -1,0 +1,513 @@
+@import url("../../main/css/main.css");
+@import url("animation.css");
+
+
+.app{
+    width: 100%;
+    height: 100vh;
+
+    background-color: #eeeeee;
+
+    font-size: 0.9rem;
+    
+    overflow: auto;
+}
+
+.lyt{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.hdr{
+    background-color: #000;
+    box-shadow: 0 0 10px 0 #00000092;
+}
+
+.hdr-ctn{
+    width: 100%;
+    max-width: 2000px;
+
+    margin: auto;
+    padding: 14px 68px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ctg-nav{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-btn-layout{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-btn, .prf > button{
+    height: 40px;
+
+    padding: 0 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    background-color: transparent;
+    border-radius: 20px;
+    border: none;
+
+    font-size: 1rem;
+    color: #fff;
+
+    cursor: pointer;
+}
+
+.nav-btn:hover{
+    background-color: #303030;
+}
+
+.prf{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    color: #fff;
+}
+
+.prf > img{
+    aspect-ratio: 1/1;
+    width: 50px;
+
+    background-color: #dadada;
+    border: 3px solid #3f3f3f;
+    border-radius: 50%;
+}
+
+.prf-data {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.prf > button{
+    aspect-ratio: 1/1;
+
+    padding: 0;
+}
+
+.prf > button:hover{
+    background-color: red;
+}
+
+.ctn{
+    width: 100%;
+    max-width: 2000px;
+    height: 100%;
+    
+    margin: auto;
+    padding: 0 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.onglet{
+    height: 100%;
+    
+    display: none;
+}
+
+.onglet.active{
+    display: flex;
+
+    animation: fade 1s forwards;
+}
+
+.onglet-layout{
+    flex: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.page-1{
+    display: flex;
+    /* flex-direction: column; */
+    gap: 20px;
+}
+
+.table{
+    width: 100%;
+    height: 100%;
+
+    padding: 60px;
+
+    background-color: #fff;
+    box-shadow: 0 0 20px 0 #dadada;
+    border-radius: 20px;
+}
+
+.table-commande{
+    margin: 0 0 25px 0;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.table-desc{
+    margin: 10px 0 30px 0;
+    padding: 8px 14px;
+
+    display: block;
+
+    background-color: #d4def7;
+    border-radius: 10px;
+    text-align: justify;
+}
+
+.table-commande-in{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 15px;
+}
+
+.table-commande-slt{
+    height: 40px;
+
+    padding: 0 10px;
+
+    background-color: #eee;
+    border: 1px solid #dadada;
+    border-radius: 10px;
+
+    font-size: 0.9rem;
+}
+
+select.table-commande-slt{
+    cursor: pointer;
+}
+
+.table-commande-slt-search{
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+.table-commande-slt-search input{
+    height: 40px;
+
+    padding: 0 10px;
+
+    background-color: transparent;
+    border: none;
+
+    border-radius: 10px 0 0 10px;
+
+    outline: none;
+}
+
+.table-commande-slt-search button{
+    height: 40px;
+
+    padding: 0 10px;
+
+    background-color: transparent;
+    border: none;
+    border-radius: 10px 0 0 10px;
+
+    cursor: pointer;
+}
+
+.table-commande-slt-search button:hover > i{
+    color: red;
+}
+
+.table-commande-btn{
+    height: 40px;
+
+    padding: 0 10px;
+
+    background-color: #000;
+    border: none;
+    border-radius: 10px;
+
+    font-size: 0.9rem;
+    color: #fff;
+
+    cursor: pointer;
+}
+
+.table-commande-btn:hover{
+    background-color: #3f3f3f;
+}
+
+.table-head{
+    margin: 0 0 20px 0;
+
+    background-color: #eee;
+    border: 1px solid #dadada;
+    border-radius: 10px;
+
+    text-align: center;
+}
+
+.table-body{
+    max-height: 400px;
+
+    overflow: auto;
+}
+
+.table-line{
+    display: flex;
+}
+
+.table-head .table-line{
+    height: 54px;
+}
+
+.table-body .table-line{
+    border-bottom: 1px solid #dadada;
+}
+
+.table-body .table-line:last-child{
+    border: none;
+}
+
+.table-cell{
+    flex: 1;
+
+    padding: 8px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow-wrap: anywhere;
+    text-align: center;
+}
+
+.table:nth-child(2) .table-line .table-cell:nth-child(2), .table:nth-child(1) .table-line .table-cell:nth-child(5){
+    flex: 2;
+}
+
+.table-cell-button{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+.table-cell-status{
+    padding: 3px 6px;
+
+    border-radius: 10px;
+}
+
+.table-cell-status.active{
+    background-color: #ddd4ff;
+
+    color: #4e32b3;
+}
+
+.table-cell-status.disable{
+    background-color: #dadada;
+    
+    color: #000000;
+}
+
+
+.footer{
+    width: 100%;
+    max-width: 2000px;
+    
+    margin: auto;
+    padding: 0 20px 20px 20px;
+}
+
+.footer-ctn{
+    padding: 20px 60px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    background-color: #fff;
+    box-shadow: 0 0 20px 0 #dadada;
+    border-radius: 20px;
+
+    text-align: center;
+    color: #7d7d7d;
+}
+
+
+
+
+
+
+
+
+
+.notif-layout{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.notif-ctn{
+    display: none;
+
+    position: relative;
+
+    background-color: #fff;
+    box-shadow: 0 0 20px 0 #dadada;
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+.notif-ctn.active{
+    display: block;
+
+    animation: 800ms notif forwards;
+}
+
+.notif-ct{
+    padding: 10px 20px;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.notif-ct > button{
+    width: 20px;
+    height: 40px;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    background-color: transparent;
+    border-radius: 20px;
+    border: none;
+
+    font-size: 1rem;
+
+    cursor: pointer;
+}
+
+.notif-ct > button:hover{
+    color: red;
+}
+
+.notif-bar-layout{
+    width: 100%;
+
+    background-color: #dadada;
+}
+
+.notif-bar-cursor{
+    width: 0px;
+    height: 5px;
+
+    background-color: #000;
+
+    animation: timer 5s forwards linear;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+@media screen and (max-width: 1800px){
+    .page-1{
+        flex-direction: column;
+    }
+} */
